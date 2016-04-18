@@ -1,0 +1,39 @@
+<div>      
+    <div class="row">          
+        <div class="col-50">
+            <audio id="AudioPlayer" controls="controls" autoplay>
+                <source  src="{{Questionogg}}"  type="audio/ogg" />
+                <source  src="{{Question}}"  type="audio/mpeg" />
+            </audio>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-33 padding-top">
+            <button ng-click="$emit('RepeatA')" class="topcoat-button--large">Hear Again!</button>
+        </div>
+        <div class="col-25 padding-top">
+            <button  id="Score" class="topcoat-button--large">Score: 0</button>
+        </div>
+        <div class="col-33 padding-top">
+            <button id="Needed" class="topcoat-button--large">Score Needed: </button>
+        </div>
+    </div>
+      
+    <div class="row">
+
+        <div class="col-33 padding">
+            <button class="topcoat-button--large" ng-click="$emit('ChoseA')"  id="option1" style="margin-top:10px;font-size: 24px">A. <img class="fade-in" src="{{choiceA}}" width="80" /></button>
+         </div>
+        <div class="col-33 padding">
+            <button class="topcoat-button--large padding" ng-click="$emit('ChoseB')" id="option2" style="margin-left:40px;margin-top:10px;font-size: 24px">B. <img class="fade-in"  src="{{choiceB}}" width="80" /></button>
+          </div>
+            
+    </div>
+    <div class="row">
+    <div class="col-33 padding">
+    <button class="topcoat-button--large" ng-click="$emit('ChoseC')"  id="option3" style="display:block;margin-right:auto;margin-top:10px;font-size: 24px">C. <img class="fade-in"  src="{{choiceC}}" width="80" /> </button> 
+    </div>
+    </div>
+</div>

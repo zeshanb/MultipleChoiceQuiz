@@ -1,0 +1,17 @@
+{
+  "f0": { "en": "Alif.Lam.Meem", "img": "f0.png", "sound": "f0.m4a", "soundogg": "f0.ogg"},
+  "f1": { "en": "Alif.Lam.Meem.Saud", "img": "f1.png", "sound": "f1.m4a", "soundogg": "f1.ogg"},
+  "f2": { "en": "Alif.Lam.Ra", "img": "f2.png", "sound": "f2.m4a", "soundogg": "f2.ogg"},
+  "f3": { "en": "Alif.Lam.Meem.Ra", "img": "f3.png", "sound": "f3.m4a", "soundogg": "f3.ogg"},
+  "f4": { "en": "Kaf.Ha.Ya.Ain.Saud", "img": "f4.png", "sound": "f4.m4a", "soundogg": "f4.ogg"},
+  "f5": { "en": "Thau.Ha", "img": "f5.png", "sound": "f5.m4a", "soundogg": "f5.ogg"},
+  "f6": { "en": "Tau.Seen.Meem", "img": "f6.png", "sound": "f6.m4a", "soundogg": "f6.ogg"},
+  "f7": { "en": "Tau.Seen", "img": "f7.png", "sound": "f7.m4a", "soundogg": "f7.ogg"},
+  "f8": { "en": "Ya.Seen", "img": "f8.png", "sound": "f8.m4a", "soundogg": "f8.ogg"},
+  "f9": { "en": "Saud", "img": "f9.png", "sound": "f9.m4a", "soundogg": "f9.ogg"},
+  "f10": { "en": "Ha.Meem", "img": "f10.png", "sound": "f10.m4a", "soundogg": "f10.ogg"},
+  "f11": { "en": "Ha.Meem.Ain.Seen.Qaf", "img": "f11.png", "sound": "f11.m4a", "soundogg": "f11.ogg"},
+  "f12": { "en": "Qaf", "img": "f12.png", "sound": "f12.m4a", "soundogg": "f12.ogg"},
+  "f13": { "en": "Noon", "img": "f13.png", "sound": "f13.m4a", "soundogg": "f13.ogg"},
+  "f14": { "en": "Alif.Lam.Meem.Allahhu", "img": "f14.png", "sound": "f14.m4a", "soundogg": "f14.ogg"}
+}
