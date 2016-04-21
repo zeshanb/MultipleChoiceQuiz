@@ -6,7 +6,7 @@
 <h2>Libraries/Framework/Modules Used</h2>
 <ul>
     <li>ionic v1.0.0</li>
-    <li>AngularJS v1.2.9 - JS</li>
+    <li>AngularJS v1.2.17 - bundled with ionic framework</li>
     <ul><h3>Angular Module</h3>
        <li>angular-route.min Version 3</li>
     </ul>
@@ -25,7 +25,10 @@
 <h2>Books and references used</h2>
 <ul>
     <li>ionic online user interface documentation (http://docs.ionic.io/)</li>
+    <li>Angular docs (https://code.angularjs.org/1.2.17/docs/guide)</li>
     <li>The Definitive Guide to Apache mod_rewrite (APRESS)</li>
+    <li>Beginning AngularJS (APRESS)</li>
+    <li>HTML5 Programmer’s Reference (APRESS)</li>
     <li>JavaScript JSON Cookbook(Packt Publishing)</li>
     <li>JavaScript The Definitive Guide (orelly media)</li>
 </ul>

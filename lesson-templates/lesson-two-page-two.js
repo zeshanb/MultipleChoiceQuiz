@@ -1,49 +1,50 @@
 /* Programmed by: Zeshan Bilal
-   Date: July 02 2014
+   Date: June 28 2014
 */
 
-function LessonTwoPageThree($scope,$http){
+function LessonTwoPageTwo($scope,$http){
     
-  if(QuizData){ QuizData = null;}
+    if(QuizData){ QuizData = null;}
     
    var score = 0;
-    var displayscore = document.getElementById('ScoreThree');
-    var needed = 48;
-    var displayneeded = document.getElementById('NeededThree');
-    displayneeded.innerHTML = "Score Needed: 48";
+    var displayscore = document.getElementById('ScoreTwo');
+    var needed = 40; 
+    var displayneeded = document.getElementById('NeededTwo');
+    displayneeded.innerHTML = "Score Needed: 40";
     var VerifyAnswer = new Array();
     var ForScore;
-    var audio = document.getElementById('AudioPlayerThree');
+    var audio = document.getElementById('AudioPlayerTwo');
     var whattochoose;
         
        function AnswerChoices(Question){
            
            whattochoose = Math.floor(0 + (1+2-0)*Math.random());
             
-            choices[0] = Math.floor(0 + (1+15-0)*Math.random());
-            choices[1] = Math.floor(16 + (1+30-16)*Math.random());
-            choices[2] = Math.floor(31 + (1+47-31)*Math.random());
+            choices[0] = Math.floor(0 + (1+13-0)*Math.random());
+            choices[1] = Math.floor(14 + (1+26-14)*Math.random());
+            choices[2] = Math.floor(27 + (1+39-27)*Math.random());
 
         }
 
           
          function NextQuestion() {
         
+                   //pickQuestion();
                      AnswerChoices();
              
-                    CorrectAnswer = "image/Lesson2Pg3/"+QuizData["e"+ choices[whattochoose] +""].en +"";
-                    ForScore = "image/Lesson2Pg3/"+QuizData["e"+ choices[whattochoose]  +""].img +"";
-                    $scope.Question = "sound/lesson2pg3/aac/"+QuizData["e"+  choices[whattochoose]   +""].sound +"";
-                    $scope.Questionogg = "sound/lesson2pg3/ogg/"+QuizData["e"+  choices[whattochoose]   +""].soundogg +"";
+                    CorrectAnswer = "../image/Lesson2Pg2/"+QuizData["d"+ choices[whattochoose] +""].en +"";
+                    ForScore = "../image/Lesson2Pg2/"+QuizData["d"+ choices[whattochoose]  +""].img +"";
+                    $scope.Question = "sound/lesson2pg2/aac/"+QuizData["d"+  choices[whattochoose]   +""].sound +"";
+                    $scope.Questionogg = "sound/lesson2pg2/ogg/"+QuizData["d"+  choices[whattochoose]   +""].soundogg +"";
                    //$scope.Question = "sound/"+QuizData["c"+ QuestionNum +""].sound +""; 
-                      $scope.choiceA = "image/Lesson2Pg3/"+QuizData["e"+ choices[0] +""].img +"";
-                      $scope.choiceAen = "image/Lesson2Pg3/"+QuizData["e"+ choices[0] +""].en +"";
-                      $scope.choiceB = "image/Lesson2Pg3/"+QuizData["e"+ choices[1] +""].img +"";
-                      $scope.choiceBen = "image/Lesson2Pg3/"+QuizData["e"+ choices[1] +""].en +"";
-                      $scope.choiceC = "image/Lesson2Pg3/"+QuizData["e"+ choices[2] +""].img +"";
-                      $scope.choiceCen = "image/Lesson2Pg3/"+QuizData["e"+ choices[2] +""].en +"";
+                      $scope.choiceA = "../image/Lesson2Pg2/"+QuizData["d"+ choices[0] +""].img +"";
+                      $scope.choiceAen = "../image/Lesson2Pg2/"+QuizData["d"+ choices[0] +""].en +"";
+                      $scope.choiceB = "../image/Lesson2Pg2/"+QuizData["d"+ choices[1] +""].img +"";
+                      $scope.choiceBen = "../image/Lesson2Pg2/"+QuizData["d"+ choices[1] +""].en +"";
+                      $scope.choiceC = "../image/Lesson2Pg2/"+QuizData["d"+ choices[2] +""].img +"";
+                      $scope.choiceCen = "../image/Lesson2Pg2/"+QuizData["d"+ choices[2] +""].en +"";
                   
-                  if(audio.canPlayType('audio/mpeg')){
+                   if(audio.canPlayType('audio/mpeg')){
                          
                          audio.src = $scope.Question;
                        } 
@@ -58,7 +59,7 @@ function LessonTwoPageThree($scope,$http){
         
               }
         
-            $http.get('lesson2-page3.json')
+            $http.get('../json-data/lesson2-page2.json')
                   .success(function(datatwo,status,headers,config){
                               
                       QuizData = datatwo;
@@ -66,17 +67,17 @@ function LessonTwoPageThree($scope,$http){
                       AnswerChoices();
                       //pickQuestion();
                       
-                   CorrectAnswer = "image/Lesson2Pg3/"+QuizData["e"+ choices[whattochoose]  +""].en +"";
-                   ForScore = "image/Lesson2Pg3/"+QuizData["e"+ choices[whattochoose]  +""].img +"";
-                    $scope.Question = "sound/lesson2pg3/aac/"+QuizData["e"+  choices[whattochoose]   +""].sound +"";
-                    $scope.Questionogg = "sound/lesson2pg3/ogg/"+QuizData["e"+  choices[whattochoose]   +""].soundogg +"";
+                   CorrectAnswer = "../image/Lesson2Pg2/"+QuizData["d"+ choices[whattochoose]  +""].en +"";
+                   ForScore = "../image/Lesson2Pg2/"+QuizData["d"+ choices[whattochoose]  +""].img +"";
+                     $scope.Question = "sound/lesson2pg2/aac/"+QuizData["d"+  choices[whattochoose]   +""].sound +"";
+                    $scope.Questionogg = "sound/lesson2pg2/ogg/"+QuizData["d"+  choices[whattochoose]   +""].soundogg +"";
                    //$scope.Question = "sound/"+QuizData["c"+ QuestionNum +""].sound +""; 
-                      $scope.choiceA = "image/Lesson2Pg3/"+QuizData["e"+ choices[0] +""].img +"";
-                      $scope.choiceAen = "image/Lesson2Pg3/"+QuizData["e"+ choices[0] +""].en +"";
-                      $scope.choiceB = "image/Lesson2Pg3/"+QuizData["e"+ choices[1] +""].img +"";
-                      $scope.choiceBen = "image/Lesson2Pg3/"+QuizData["e"+ choices[1] +""].en +"";
-                      $scope.choiceC = "image/Lesson2Pg3/"+QuizData["e"+ choices[2] +""].img +"";
-                      $scope.choiceCen = "image/Lesson2Pg3/"+QuizData["e"+ choices[2] +""].en +"";
+                      $scope.choiceA = "../image/Lesson2Pg2/"+QuizData["d"+ choices[0] +""].img +"";
+                      $scope.choiceAen = "../image/Lesson2Pg2/"+QuizData["d"+ choices[0] +""].en +"";
+                      $scope.choiceB = "../image/Lesson2Pg2/"+QuizData["d"+ choices[1] +""].img +"";
+                      $scope.choiceBen = "../image/Lesson2Pg2/"+QuizData["d"+ choices[1] +""].en +"";
+                      $scope.choiceC = "../image/Lesson2Pg2/"+QuizData["d"+ choices[2] +""].img +"";
+                      $scope.choiceCen = "../image/Lesson2Pg2/"+QuizData["d"+ choices[2] +""].en +"";
                       
                       
                      if(audio.canPlayType('audio/mpeg')){
@@ -142,7 +143,7 @@ function LessonTwoPageThree($scope,$http){
         
                $scope.$on('ChoseB', function(){
 
-                console.log($scope.choiceB);
+                console.log($scope.choice2B);
                    
                    var ChoiceIs = ""+ $scope.choiceB +"";
                    
@@ -160,7 +161,7 @@ function LessonTwoPageThree($scope,$http){
                         }
                         
                         //sound.play();
-                        audio.src = undefined;
+                        //audio.src = undefined;
                         
                         NextQuestion();
                     
@@ -191,7 +192,7 @@ function LessonTwoPageThree($scope,$http){
                         }
                         
                         //sound.play();
-                        audio.src = undefined;
+                        //audio.src = undefined;
                         
                         NextQuestion();
                     
@@ -202,7 +203,7 @@ function LessonTwoPageThree($scope,$http){
                     }  
               });
     
-           $scope.$on('RepeatA', function(){
+      $scope.$on('RepeatA', function(){
             
                 
                            audio.play();

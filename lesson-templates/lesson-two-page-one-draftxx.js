@@ -31,14 +31,14 @@ function LessonTwo($scope,$http) {
                       
                       CorrectAnswer = ""+QuizData["c"+ SelectedQuestion +""].en +"";
                       
-                      $scope.Question = "image/"+QuizData["c"+ SelectedQuestion +""].img +""; 
+                      $scope.Question = "../image/"+QuizData["c"+ SelectedQuestion +""].img +""; 
                       $scope.choiceA = ""+QuizData["c"+ choices[0] +""].en +"";
                       $scope.choiceB = ""+QuizData["c"+ choices[1] +""].en +"";
                       $scope.choiceC = ""+QuizData["c"+ choices[2] +""].en +"";
         
                 }
         
-            $http.get('lesson2-page1.json')
+            $http.get('../json-data/lesson2-page1.json')
                   .success(function(data,status,headers,config){
                      
                       QuizData = data;
@@ -47,7 +47,7 @@ function LessonTwo($scope,$http) {
                       
                       CorrectAnswer = ""+QuizData["c"+ SelectedQuestion +""].en +"";
                       
-                      $scope.Question = "image/"+QuizData["c"+ SelectedQuestion +""].img +""; 
+                      $scope.Question = "../image/"+QuizData["c"+ SelectedQuestion +""].img +""; 
                       $scope.choiceA = ""+QuizData["c"+ choices[0] +""].en +"";
                       $scope.choiceB = ""+QuizData["c"+ choices[1] +""].en +"";
                       $scope.choiceC = ""+QuizData["c"+ choices[2] +""].en +"";

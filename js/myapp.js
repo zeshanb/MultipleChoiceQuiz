@@ -22,27 +22,27 @@ myApp.config(function($routeProvider,$locationProvider, $compileProvider) {
     controller: ''
   })
   .when('/step-one-page-one', {
-    templateUrl: 'LessonTwoSound.html',
-    controller: 'LessonTwoSound'
+    templateUrl: '../lesson-templates/lesson-two-page-one.html',
+    controller: 'LessonTwoPageOne'
   })
   .when('/step-one-page-two', {
-    templateUrl: 'LessonTwoPg2Sound.html',
+    templateUrl: '../lesson-templates/lesson-two-page-two.html',
     controller: 'LessonTwoPageTwo'
   })
   .when('/step-one-page-three', {
-    templateUrl: 'lesson-two-page-three.html',
+    templateUrl: '../lesson-templates/lesson-two-page-three.html',
     controller: 'LessonTwoPageThree'
   })
   .when('/step-two-page-one', {
-    templateUrl: 'lesson-three-page-one.html',
+    templateUrl: '../lesson-templates/lesson-three-page-one.html',
     controller: 'LessonThreePageOne'
   })
   .when('/step-three-page-one', {
-    templateUrl: 'lesson-four-page-one.html',
+    templateUrl: '../lesson-templates/lesson-four-page-one.html',
     controller: 'LessonFourPageOne'
   })
   .when('/step-three-page-two', {
-    templateUrl: 'lesson-four-page-two.html',
+    templateUrl: '../lesson-templates/lesson-four-page-two.html',
     controller: 'LessonFourPageTwo'
   })
   

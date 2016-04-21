@@ -1,48 +1,49 @@
 /* Programmed by: Zeshan Bilal
-   Date: June 28 2014
+   Date: July 02 2014
 */
 
-function LessonTwoPageTwo($scope,$http){
+function LessonFourPageTwo($scope,$http){
     
-    if(QuizData){ QuizData = null;}
+  if(QuizData){ QuizData = null;}
     
    var score = 0;
-    var displayscore = document.getElementById('ScoreTwo');
-    var needed = 40; 
-    var displayneeded = document.getElementById('NeededTwo');
-    displayneeded.innerHTML = "Score Needed: 40";
+    var displayscore = document.getElementById('ScoreSix');
+    var needed = 44;
+    var displayneeded = document.getElementById('NeededSix');
+    displayneeded.innerHTML = "Score Needed: 44";
+    var VerifyAnswer = new Array();
+    var VerifyAnswer = new Array();
     var VerifyAnswer = new Array();
     var ForScore;
-    var audio = document.getElementById('AudioPlayerTwo');
+    var audio = document.getElementById('AudioPlayerSix');
     var whattochoose;
         
        function AnswerChoices(Question){
            
            whattochoose = Math.floor(0 + (1+2-0)*Math.random());
             
-            choices[0] = Math.floor(0 + (1+13-0)*Math.random());
-            choices[1] = Math.floor(14 + (1+26-14)*Math.random());
-            choices[2] = Math.floor(27 + (1+39-27)*Math.random());
+            choices[0] = Math.floor(0 + (1+14-0)*Math.random());
+            choices[1] = Math.floor(15 + (1+28-15)*Math.random());
+            choices[2] = Math.floor(29 + (1+43-29)*Math.random());
 
         }
 
           
          function NextQuestion() {
         
-                   //pickQuestion();
                      AnswerChoices();
              
-                    CorrectAnswer = "image/Lesson2Pg2/"+QuizData["d"+ choices[whattochoose] +""].en +"";
-                    ForScore = "image/Lesson2Pg2/"+QuizData["d"+ choices[whattochoose]  +""].img +"";
-                    $scope.Question = "sound/lesson2pg2/aac/"+QuizData["d"+  choices[whattochoose]   +""].sound +"";
-                    $scope.Questionogg = "sound/lesson2pg2/ogg/"+QuizData["d"+  choices[whattochoose]   +""].soundogg +"";
+                    CorrectAnswer = "image/Lesson4Pg2/"+QuizData["h"+ choices[whattochoose] +""].en +"";
+                    ForScore = "image/Lesson4Pg2/"+QuizData["h"+ choices[whattochoose]  +""].img +"";
+                    $scope.Question = "sound/lesson4pg2/aac/"+QuizData["h"+  choices[whattochoose]   +""].sound +"";
+                    $scope.Questionogg = "sound/lesson4pg2/ogg/"+QuizData["h"+  choices[whattochoose]   +""].soundogg +"";
                    //$scope.Question = "sound/"+QuizData["c"+ QuestionNum +""].sound +""; 
-                      $scope.choiceA = "image/Lesson2Pg2/"+QuizData["d"+ choices[0] +""].img +"";
-                      $scope.choiceAen = "image/Lesson2Pg2/"+QuizData["d"+ choices[0] +""].en +"";
-                      $scope.choiceB = "image/Lesson2Pg2/"+QuizData["d"+ choices[1] +""].img +"";
-                      $scope.choiceBen = "image/Lesson2Pg2/"+QuizData["d"+ choices[1] +""].en +"";
-                      $scope.choiceC = "image/Lesson2Pg2/"+QuizData["d"+ choices[2] +""].img +"";
-                      $scope.choiceCen = "image/Lesson2Pg2/"+QuizData["d"+ choices[2] +""].en +"";
+                      $scope.choiceA = "image/Lesson4Pg2/"+QuizData["h"+ choices[0] +""].img +"";
+                      $scope.choiceAen = "image/Lesson4Pg2/"+QuizData["h"+ choices[0] +""].en +"";
+                      $scope.choiceB = "image/Lesson4Pg2/"+QuizData["h"+ choices[1] +""].img +"";
+                      $scope.choiceBen = "image/Lesson4Pg2/"+QuizData["h"+ choices[1] +""].en +"";
+                      $scope.choiceC = "image/Lesson4Pg2/"+QuizData["h"+ choices[2] +""].img +"";
+                      $scope.choiceCen = "image/Lesson4Pg2/"+QuizData["h"+ choices[2] +""].en +"";
                   
                    if(audio.canPlayType('audio/mpeg')){
                          
@@ -56,28 +57,28 @@ function LessonTwoPageTwo($scope,$http){
                       
                        
                           audio.play();
-        
               }
         
-            $http.get('lesson2-page2.json')
-                  .success(function(datatwo,status,headers,config){
+            $http.get('../json-data/lesson4-page2.json')
+            
+            .success(function(datatwo,status,headers,config){
                               
                       QuizData = datatwo;
-                       
+                      
                       AnswerChoices();
                       //pickQuestion();
                       
-                   CorrectAnswer = "image/Lesson2Pg2/"+QuizData["d"+ choices[whattochoose]  +""].en +"";
-                   ForScore = "image/Lesson2Pg2/"+QuizData["d"+ choices[whattochoose]  +""].img +"";
-                     $scope.Question = "sound/lesson2pg2/aac/"+QuizData["d"+  choices[whattochoose]   +""].sound +"";
-                    $scope.Questionogg = "sound/lesson2pg2/ogg/"+QuizData["d"+  choices[whattochoose]   +""].soundogg +"";
+                   CorrectAnswer = "../image/Lesson4Pg2/"+QuizData["h"+ choices[whattochoose]  +""].en +"";
+                   ForScore = "../image/Lesson4Pg2/"+QuizData["h"+ choices[whattochoose]  +""].img +"";
+                    $scope.Question = "sound/lesson4pg2/aac/"+QuizData["h"+  choices[whattochoose]   +""].sound +"";
+                    $scope.Questionogg = "sound/lesson4pg2/ogg/"+QuizData["h"+  choices[whattochoose]   +""].soundogg +"";
                    //$scope.Question = "sound/"+QuizData["c"+ QuestionNum +""].sound +""; 
-                      $scope.choiceA = "image/Lesson2Pg2/"+QuizData["d"+ choices[0] +""].img +"";
-                      $scope.choiceAen = "image/Lesson2Pg2/"+QuizData["d"+ choices[0] +""].en +"";
-                      $scope.choiceB = "image/Lesson2Pg2/"+QuizData["d"+ choices[1] +""].img +"";
-                      $scope.choiceBen = "image/Lesson2Pg2/"+QuizData["d"+ choices[1] +""].en +"";
-                      $scope.choiceC = "image/Lesson2Pg2/"+QuizData["d"+ choices[2] +""].img +"";
-                      $scope.choiceCen = "image/Lesson2Pg2/"+QuizData["d"+ choices[2] +""].en +"";
+                      $scope.choiceA = "../image/Lesson4Pg2/"+QuizData["h"+ choices[0] +""].img +"";
+                      $scope.choiceAen = "../image/Lesson4Pg2/"+QuizData["h"+ choices[0] +""].en +"";
+                      $scope.choiceB = "../image/Lesson4Pg2/"+QuizData["h"+ choices[1] +""].img +"";
+                      $scope.choiceBen = "../image/Lesson4Pg2/"+QuizData["h"+ choices[1] +""].en +"";
+                      $scope.choiceC = "../image/Lesson4Pg2/"+QuizData["h"+ choices[2] +""].img +"";
+                      $scope.choiceCen = "../image/Lesson4Pg2/"+QuizData["h"+ choices[2] +""].en +"";
                       
                       
                      if(audio.canPlayType('audio/mpeg')){
@@ -94,17 +95,16 @@ function LessonTwoPageTwo($scope,$http){
                           audio.play();
                       
                       
-                      console.log('success',status)
-                      console.log(QuizData)
+                      console.log('success',status);
+                      console.log(QuizData);
                   
                   })
                   .error(function(data,status,headers, config){
                      
-                      console.log('error!', status)
-                      console.log(QuizData)
+                      console.log('error!', status);
+                      console.log(QuizData);
                   })
             
-          
             
             
             $scope.$on('ChoseA', function(){
@@ -143,7 +143,7 @@ function LessonTwoPageTwo($scope,$http){
         
                $scope.$on('ChoseB', function(){
 
-                console.log($scope.choice2B);
+                console.log($scope.choiceB);
                    
                    var ChoiceIs = ""+ $scope.choiceB +"";
                    
@@ -161,7 +161,7 @@ function LessonTwoPageTwo($scope,$http){
                         }
                         
                         //sound.play();
-                        //audio.src = undefined;
+                        audio.src = undefined;
                         
                         NextQuestion();
                     
@@ -192,7 +192,7 @@ function LessonTwoPageTwo($scope,$http){
                         }
                         
                         //sound.play();
-                        //audio.src = undefined;
+                        audio.src = undefined;
                         
                         NextQuestion();
                     
@@ -203,7 +203,7 @@ function LessonTwoPageTwo($scope,$http){
                     }  
               });
     
-      $scope.$on('RepeatA', function(){
+           $scope.$on('RepeatA', function(){
             
                 
                            audio.play();
