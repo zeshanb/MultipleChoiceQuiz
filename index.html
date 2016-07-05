@@ -12,8 +12,9 @@
     
 </head>
 <body ng-app="myApp">
+<!-- entire view BEGIN-->
   <ion-side-menus>  
- <!-- Center Content -->
+ 
     <ion-side-menu-content>
          <ion-header-bar class="bar-balanced">
              
@@ -23,16 +24,17 @@
         <h1 class="title">Your Educational Institutue Name Here</h1>
              
         </ion-header-bar>
-        
+        <!-- Center Content BEGIN-->
         <ion-content>
             
-    <!-- where the content of each page will be rendered -->
+    <!-- where the content of each page will be rendered ng-view -->
     <ng-view></ng-view>
             
         </ion-content>
+        <!-- Center Content END -->
     </ion-side-menu-content>
     
-   <!--Left menu -->
+   <!--Left menu BEGIN -->
    <ion-side-menu  side="left">
       <ion-header-bar  class="bar-balanced">
         <h1 class="title">Steps</h1>
@@ -75,8 +77,9 @@
          </ion-list>
           </ion-content>
     </ion-side-menu>
-      
-</ion-side-menus>                                                                                                 
+     <!--Left menu END -->
+</ion-side-menus>
+<!-- entire view END-->
 <script type="text/javascript" src="ionic/js/ionic.bundle.js"></script>
 <script type="text/javascript" src="angular/module/angular-route.min.js"></script>
 <script type="text/javascript" src="js/myapp.js"></script>
