@@ -22,6 +22,20 @@
     <li>.json files are static text data files loaded in Application at runtime</li>
 </ul>
 
+<h2>Run Application on Localhost</h2>
+
+<p>There was an issue raised requesting how to test this Application on localhost. The simplest way is to use a Chrome Web Server extension</p>
+
+<ol>
+	<li>Download this repo and unzip</li>
+	<li>Download Chrome Web Server: [Chrome Web Server](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)</li>
+	<li>Enable and Run Chrome Web Server extension click "choose folder"</li>
+	<li>Select the folder you've unziped containing files for MultipleChoiceQuiz</li>
+	<li>Visit generated url by Chrome Web Server on a new browser window: http://127.0.0.1:8887</li>
+</ol>
+
+<strong>Note: Unblocking port 8887 may be required for your local operating system firewall or firewall bundled with your antivirus software. To turn this application into a mobile App would require updates to this applications code.</strong>
+
 <h2>Books and references used</h2>
 <ul>
     <li>ionic online user interface documentation (http://docs.ionic.io/)</li>
